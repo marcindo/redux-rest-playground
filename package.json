@@ -15,7 +15,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.14",
     "html-webpack-plugin": "^2.26.0",
-    "webpack": "beta",
+    "webpack": "^2.2.1",
     "webpack-dashboard": "^0.2.1",
     "webpack-merge": "^2.3.1"
   }
