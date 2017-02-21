@@ -10,7 +10,7 @@ module.exports = webpackMerge(
       new DashboardPlugin(),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src', 'index.ejs'),
-        title: 'template', // FIXME
+        title: 'template',
       }),
     ],
     performance: {

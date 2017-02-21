@@ -1,11 +1,15 @@
 const path = require('path');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', ''), // FIXME
+  entry: {
+    main: path.resolve(__dirname, 'src', 'index.js'),
+    // vendor: [],
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'app.[hash:6].js',
+    filename: '[chunkhash].[name].js',
   },
   resolve: {
     modules: [
@@ -15,10 +19,24 @@ module.exports = {
   },
   module: {
     rules: [
-      // FIXME
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new CleanWebpackPlugin(['build']),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: [
+        // 'vendor',
+        'manifest'
+      ],
+    }),
   ],
 };
