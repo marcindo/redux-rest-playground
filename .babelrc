@@ -6,9 +6,11 @@
       },
       "modules": false,
       "useBuiltIns": true
-    }]
+    }],
+    "react"
   ],
   "plugins": [
-    "syntax-dynamic-import"
+    "syntax-dynamic-import",
+    "transform-object-rest-spread"
   ]
 }
