@@ -15,7 +15,7 @@ module.exports = webpackMerge(
       new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src', 'index.ejs'),
-        title: 'template',
+        title: 'react-template',
         minify: {
           collapseWhitespace: true,
         },

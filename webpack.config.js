@@ -75,7 +75,7 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, 'src', 'index.ejs'),
-      title: 'template',
+      title: 'react-template',
     }),
   ],
 
