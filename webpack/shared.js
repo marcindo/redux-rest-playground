@@ -42,7 +42,12 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader/useable',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+            },
+          },
         ],
       },
     ],
