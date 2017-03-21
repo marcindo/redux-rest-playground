@@ -21,7 +21,9 @@ module.exports = {
   },
 
    plugins: [
-    new CleanWebpackPlugin(['build']),
+    new CleanWebpackPlugin(['build'], {
+      root: resolve(__dirname, '..'),
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
@@ -33,7 +35,9 @@ module.exports = {
         'manifest'
       ],
     }),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+    }),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '..' ,'src', 'index.ejs'),
       title: 'react-template',
