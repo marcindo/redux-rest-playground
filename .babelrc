@@ -11,7 +11,18 @@
   ],
   "plugins": [
     "syntax-dynamic-import",
-    "transform-object-rest-spread",
-    "react-hot-loader/babel"
-  ]
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }

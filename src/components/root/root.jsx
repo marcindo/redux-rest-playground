@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import Btn from './btn';
+import Btn from 'components/btn';
 
 export default class Root extends PureComponent {
   foo() { // eslint-disable-line class-methods-use-this

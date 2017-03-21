@@ -2,6 +2,8 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// const TARGET = process.env.npm_lifecycle_event;
+
 module.exports = {
 
   entry: [
