@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8081',
     'webpack/hot/only-dev-server',
     resolve(__dirname, '..', 'src', 'index.jsx'),
   ],
@@ -17,8 +16,10 @@ module.exports = {
   },
 
   devServer: {
-    hot: true,
     contentBase: resolve(__dirname, '..', 'build'),
+    hot: true,
+    open: true,
+    inline: true,
     publicPath: '/',
   },
 
@@ -34,6 +35,4 @@ module.exports = {
   performance: {
     hints: false,
   },
-
-  devtool: 'cheap-module-eval-source-map',
 };

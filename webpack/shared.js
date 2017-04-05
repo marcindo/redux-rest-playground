@@ -41,7 +41,9 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader/useable',
+          {
+            loader: 'style-loader/useable',
+          },
           {
             loader: 'css-loader',
             options: {
@@ -52,4 +54,6 @@ module.exports = {
       },
     ],
   },
+
+  devtool: 'source-map',
 };
