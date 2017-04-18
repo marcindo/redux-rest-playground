@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -45,5 +46,6 @@ module.exports = {
         collapseWhitespace: true,
       },
     }),
+    new PreloadWebpackPlugin(),
   ],
 };

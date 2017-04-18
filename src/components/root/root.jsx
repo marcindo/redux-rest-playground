@@ -4,9 +4,8 @@ import Btn from 'components/btn';
 
 export default class Root extends PureComponent {
   foo() { // eslint-disable-line class-methods-use-this
-    const { map, ...rest } = window;
-
-    console.log(Reflect.ownKeys(rest)); // eslint-disable-line no-console
+    import('foo.js')
+        .then(foo => console.log(foo.default())); // eslint-disable-line no-console
   }
 
   render() {
