@@ -5,9 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "cross-env BABEL_ENV=production webpack",
-    "test": "jest --no-cache",
-    "lint": "exit 0",
-    "validate": "exit 0"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -38,7 +36,7 @@
     "eslint-plugin-react": "^6.10.0",
     "html-webpack-plugin": "^2.26.0",
     "jest": "^19.0.2",
-    "precommit-hook": "^3.0.0",
+    "pre-commit": "^1.2.2",
     "preload-webpack-plugin": "^1.2.2",
     "react-test-renderer": "^15.4.2",
     "style-loader": "^0.13.2",
