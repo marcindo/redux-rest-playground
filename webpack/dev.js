@@ -6,7 +6,6 @@ const PreloadWebpackPlugin = require('preload-webpack-plugin');
 module.exports = {
   entry: [
     'react-hot-loader/patch',
-    'webpack/hot/only-dev-server',
     resolve(__dirname, '..', 'src', 'index.jsx'),
   ],
 
