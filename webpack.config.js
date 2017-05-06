@@ -12,7 +12,7 @@ if (TARGET === 'start') {
   config = merge(config, devConfig);
 }
 
-if (TARGET === 'build') {
+if (TARGET === 'build' || TARGET === 'analyze') {
   config = merge(config, prodConfig);
 }
 

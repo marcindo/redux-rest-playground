@@ -48,5 +48,8 @@ module.exports = {
       },
     }),
     new PreloadWebpackPlugin(),
+    ...process.env.ANALYZE_BUNDLE ?
+        [ new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)() ] :
+        [],
   ],
 };

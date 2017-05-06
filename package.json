@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "cross-env BABEL_ENV=production webpack",
+    "build": "webpack",
+    "analyze": "cross-env ANALYZE_BUNDLE=1 webpack",
     "test": "jest"
   },
   "repository": {
@@ -41,6 +42,7 @@
     "react-test-renderer": "^15.5.4",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
+    "webpack-bundle-analyzer": "^2.6.0",
     "webpack-dev-server": "^2.4.4",
     "webpack-merge": "^4.1.0"
   },
