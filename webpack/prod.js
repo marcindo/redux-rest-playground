@@ -10,6 +10,7 @@ module.exports = {
     vendor: [
       'react',
       'react-dom',
+      'react-hot-loader',
       'normalize.css',
       'styled-components',
     ],
