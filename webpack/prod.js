@@ -5,16 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
-  entry: {
-    main: resolve(__dirname, '..', 'src', 'index.jsx'),
-    vendor: [
-      'react',
-      'react-dom',
-      'react-hot-loader',
-      'normalize.css',
-      'styled-components',
-    ],
-  },
+  entry: resolve(__dirname, '..', 'src', 'index.jsx'),
 
   output: {
     path: resolve(__dirname, '..', 'build'),
@@ -32,10 +23,13 @@ module.exports = {
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: [
-        'vendor',
-        'manifest'
-      ],
+      name: 'vendor',
+      minChunks: function (module) {
+        return module.context && module.context.indexOf('node_modules') !== -1;
+      },
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
