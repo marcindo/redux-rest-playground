@@ -2,7 +2,6 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
   entry: resolve(__dirname, '..', 'src', 'index.jsx'),
@@ -10,6 +9,7 @@ module.exports = {
   output: {
     path: resolve(__dirname, '..', 'build'),
     filename: '[chunkhash].[name].js',
+    chunkFilename: '[chunkhash].[name].js',
     publicPath: '/',
   },
 
@@ -31,6 +31,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
     }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
     }),
@@ -41,7 +42,6 @@ module.exports = {
         collapseWhitespace: true,
       },
     }),
-    new PreloadWebpackPlugin(),
     ...process.env.ANALYZE_BUNDLE ?
         [ new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)() ] :
         [],
