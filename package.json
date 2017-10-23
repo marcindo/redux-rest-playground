@@ -46,7 +46,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "polished": "^1.8.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^3.0.0",

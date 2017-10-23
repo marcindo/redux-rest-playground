@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { normalize } from 'polished';
+import { injectGlobal } from 'styled-components';
 
-import styles from 'normalize.css';
 import Root from './components/root';
 
-styles.use();
+injectGlobal`${normalize()}`;
 
 render(Root);
 

@@ -5,7 +5,8 @@
     "browser": true
   },
   "rules": {
-    "no-use-before-define": ["error", { "functions": false }]
+    "no-use-before-define": ["error", { "functions": false }],
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
   },
   "settings": {
     "import/resolver": "webpack"
