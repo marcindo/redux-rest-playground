@@ -15,11 +15,3 @@ exports[`Renders btn 2`] = `
   Ipsum
 </button>
 `;
-
-exports[`Renders btn 3`] = `
-<button
-  className="sc-bdVaJa dLOjfg"
->
-  💩
-</button>
-`;

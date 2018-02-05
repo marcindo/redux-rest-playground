@@ -2,11 +2,21 @@
   "root": true,
   "parser": "babel-eslint",
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
+  "globals": {
+    "fetch": false
+  },
+  "plugins": [
+    "jest"
+  ],
   "rules": {
     "no-use-before-define": ["error", { "functions": false }],
-    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "import/prefer-default-export": "warn",
+    "react/no-did-mount-set-state": false
+    
   },
   "settings": {
     "import/resolver": "webpack"
