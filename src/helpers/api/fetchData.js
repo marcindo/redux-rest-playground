@@ -1,6 +1,6 @@
 
 import got from 'got';
 
-export default async function (...params) {
+export default function (...params) {
   return got(...params);
 }

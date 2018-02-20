@@ -5,9 +5,9 @@ import { AppContainer } from 'react-hot-loader';
 import { normalize } from 'polished';
 import { injectGlobal } from 'styled-components';
 import { Provider } from 'react-redux';
-
+import 'styles/index.css';
 import Root from 'components/root';
-import store from './store';
+import store from 'store';
 
 injectGlobal`${normalize()}`;
 

@@ -1,1 +1,3 @@
-export { getPosts } from './api';
+export { getPosts,
+  getUsers,
+  getTodos } from './api';

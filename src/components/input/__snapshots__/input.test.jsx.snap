@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders btn 1`] = `
+<input
+  className="sc-bdVaJa crseKW"
+  size={8}
+  type="text"
+>
+  Lorem
+</input>
+`;
+
+exports[`Renders btn 2`] = `
+<input
+  className="sc-bdVaJa crseKW"
+  size={8}
+  type="text"
+>
+  Ipsum
+</input>
+`;

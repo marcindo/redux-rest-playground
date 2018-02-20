@@ -1,13 +1,12 @@
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import Root from '.';
 
-global.fetch = jest.fn(() => new Promise(resolve => resolve()));
-
-
 it('Renders root', () => {
-  const component = renderer.create(<Root />);
+  const renderer = new ShallowRenderer();
+  renderer.render(<Root />);
+  const component = renderer.getRenderOutput();
 
   expect(component).toMatchSnapshot();
 });

@@ -16,7 +16,6 @@
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
     "import/prefer-default-export": "warn",
     "react/no-did-mount-set-state": false
-    
   },
   "settings": {
     "import/resolver": "webpack"

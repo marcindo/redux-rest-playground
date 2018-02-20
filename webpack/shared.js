@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const { resolve, join } = require('path');
 
 module.exports = {
   context: resolve(__dirname, '..', 'src'),
@@ -44,18 +44,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader/useable',
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: true,
-            },
-          },
+        loaders: [
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]&sourceMap&-minimize',
         ],
       },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        include: [join(__dirname, '..', 'src/assets')],
+        loader: 'file-loader?name=assets/[name].[ext]',
+      },
+
     ],
   },
 

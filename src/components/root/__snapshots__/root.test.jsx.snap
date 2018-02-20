@@ -1,3 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders root 1`] = `<ul />`;
+exports[`Renders root 1`] = `
+<div
+  className="root"
+>
+  <styled.input />
+  <Connect(Connect(PostsList)) />
+</div>
+`;
